@@ -65,45 +65,45 @@ public class MainActivity extends AppCompatActivity {
             switch (v.getId()){
                 case R.id.btn01:
                     if (event.getAction() == MotionEvent.ACTION_DOWN){//按下按钮
-                        message[0] = (byte) 0000;//传入前进参数
+                        message[0] = (byte) 0x31;//传入前进参数
                         SendtoBlueTooth(message);
                         Log.d("KroFin", ""+message[0]);
                     }
                     if (event.getAction() == MotionEvent.ACTION_UP){//松开按钮
-                        message[0] = (byte) 0000;//传入停止参数
+                        message[0] = (byte) 0x30;//传入停止参数
                         SendtoBlueTooth(message);
                         Log.d("KroFin", ""+message[0]);
                     }break;
                 case R.id.btn02:
                     if (event.getAction() == MotionEvent.ACTION_DOWN){
-                        message[0] = (byte) 0000;//传入左转向参数
+                        message[0] = (byte) 0x32;//传入左转向参数
                         SendtoBlueTooth(message);
                         Log.d("KroFin", ""+message[0]);
                     }
                     if (event.getAction() == MotionEvent.ACTION_UP){//松开按钮
-                        message[0] = (byte) 0000;//传入停止参数
+                        message[0] = (byte) 0x30;//传入停止参数
                         SendtoBlueTooth(message);
                         Log.d("KroFin", ""+message[0]);
                     }break;
                 case R.id.btn03:
                     if (event.getAction() == MotionEvent.ACTION_DOWN){
-                        message[0] = (byte) 0000;//传入后退参数
+                        message[0] = (byte) 0x33;//传入后退参数
                         SendtoBlueTooth(message);
                         Log.d("KroFin", ""+message[0]);
                     }
                     if (event.getAction() == MotionEvent.ACTION_UP){//松开按钮
-                        message[0] = (byte) 0000;//传入停止参数
+                        message[0] = (byte) 0x30;//传入停止参数
                         SendtoBlueTooth(message);
                         Log.d("KroFin", ""+message[0]);
                     }break;
                 case R.id.btn04:
                     if (event.getAction() == MotionEvent.ACTION_DOWN){
-                        message[0] = (byte) 0000;//传入右转向参数
+                        message[0] = (byte) 0x34;//传入右转向参数
                         SendtoBlueTooth(message);
                         Log.d("KroFin", ""+message[0]);
                     }
                     if (event.getAction() == MotionEvent.ACTION_UP){//松开按钮
-                        message[0] = (byte) 0000;//传入停止参数
+                        message[0] = (byte) 0x30;//传入停止参数
                         SendtoBlueTooth(message);
                         Log.d("KroFin", ""+message[0]);
                     }break;
@@ -143,8 +143,5 @@ public class MainActivity extends AppCompatActivity {
         }catch (IOException e){
             e.printStackTrace();
         }
-    }
-    public void showMessage(String msg){
-        Toast.makeText(this,msg, Toast.LENGTH_SHORT).show();
     }
 }
