@@ -13,8 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-        <TextView
+
+        <Button
             android:id="@+id/tv01"
+            android:text="打开陀螺仪"
             android:layout_centerInParent="true"
             android:layout_width="100dp"
             android:layout_height="100dp" />
@@ -68,6 +70,17 @@
             android:scaleType="fitXY"
             android:src="@drawable/c"
             android:theme="@style/white"/>
+
+        <TextView
+            android:id="@+id/sensor_info"
+            android:textAlignment="center"
+            android:textSize="50dp"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_above="@id/tv01"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="-349dp" />
 
     </RelativeLayout>
 
